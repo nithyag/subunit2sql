@@ -109,6 +109,8 @@ def increment_counts(test, results):
         test_values['failure'] = test.failure + 1
     elif status == 'skip':
         test_values = {}
+    elif status == 'exists':
+        test_values = {}
     else:
         msg = "Unknown test status %s" % status
         raise exceptions.UnknownStatus(msg)
