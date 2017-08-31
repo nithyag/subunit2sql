@@ -76,8 +76,6 @@ class ReadSubunit(object):
     def parse_outcome(self, test):
         metadata = {}
         status = test['status']
-        if status == 'exists':
-            return
         name = self.cleanup_test_name(test['id'])
         attrs = self.get_attrs(test['id'])
         if attrs:
